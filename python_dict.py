@@ -73,7 +73,38 @@ d['Alice'] = 60
 print("Alice's old score = ",o_score)
 print(d)
 
-#在dict中，使用keys()方法，可以返回dict的所有key，在删除某个元素时，可以通过这个方法先判断某个元素是否存在，
+#在dict中，使用keys()方法，可以返回dict的所有key，在删除某个元素时，可以通过这个方 法先判断某个元素是否存在，
 # 请改造前面的程序，使得即使key不存在时，删除也不会抛异常。
+d = {
+    'Alice': 45,
+    'Bob': 60,
+    'Candy': 75,
+    'David': 86,
+    'Ellena': 49
+}
+pname = 'AliceA'
+if pname in d.keys():
+    popname = d.pop(pname)
+    print("被删除的人是:",pname)
+else:
+    print('找不到{}，无法删除'.format(pname))
+print(d)
 
 
+#同学的近三次成绩如下，请把每个同学的每次成绩依次输出。
+#d = {'Alice': [50, 61, 66], 'Bob': [80, 61, 66], 'Candy': [88, 75, 90]}
+dd = {'Alice': [50, 61, 66], 'Bob': [80, 61, 66], 'Candy': [88, 75, 90]}
+for key,value in dd.items():
+    for x in value:
+        print(key,x)
+
+
+d = {'Alice': [50, 61, 66], 'Bob': [80, 61, 66], 'Candy': [88, 75, 90]}
+#dict提供keys()函数，可以返回dict中所有的key。
+print( d.keys())
+#dict提供values()函数，可以返回dict中所有的value。
+print(d.values())
+
+#已知d = {'Alice': [50, 61, 66], 'Bob': [80, 61, 66], 'Candy': [88, 75, 90]}，请输出d的元素个数。
+d = {'Alice': [50, 61, 66], 'Bob': [80, 61, 66], 'Candy': [88, 75, 90]}
+print(len(d.keys())+len(d.values()))
