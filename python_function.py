@@ -34,3 +34,32 @@ def square_of_sum(Li):
 Li = [1, 3, 5, 7, 9, 11]
 x = square_of_sum(Li)
 print(x)
+
+
+#定义一个函数sub_sum()，这个函数接收一个列表作为参数，函数返回列表所有奇数项的和以及所有偶数项的和。
+def sub_sum(L):
+    sum1 = 0
+    sum2 = 0
+    for num in L:
+        if num%2 == 0:
+            sum1 = num + sum1
+        if num%2 == 1:
+            sum2 = num + sum2
+    return  sum1,sum2
+L = [1,2,3,4]
+sum = sub_sum(L)
+print('偶数和:{}'.format(sum[0]))
+print('奇数和:{}'.format(sum[1]))
+
+
+#请分别使用循环和递归的形式定义函数，求出1~100的和。
+#循环
+def cycle_sum(num_l):
+    n = 0
+    if n <= 100 :
+        sum = n + (n+1)
+    n += 1
+    return sum
+print(sum)
+
+#递归
