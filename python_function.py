@@ -118,3 +118,13 @@ def avgenum(*args):
 print(avgenum(1,2,3,4,5))
 
 #编写一个函数，它接受关键字参数names，gender，age三个list，分别包含同学的名字、性别和年龄，请分别把每个同学的名字、性别和年龄打印出来。
+def info(**kwargs):
+    names = kwargs['name']
+    gender_list = kwargs['gender']
+    age_list = kwargs['age']
+    index = 0
+    for name in names:
+        gender = gender_list[index]
+        age = age_list[index]
+        print('name:{},gender:{},age:{}'.format(name,gender,age))
+        index += 1
